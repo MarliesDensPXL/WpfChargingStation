@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChargingStation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="400">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="EV Charging Station" FontSize="26" Padding="5" Foreground="White" Background="MidnightBlue"/>
+        <TextBlock Grid.Row="1" Text="Klant" FontWeight="Bold" Margin="5,5,5,5"/>
+        <ComboBox Grid.Row="2" x:Name="customerComboBox" Margin="5,5,5,5"/>
+        <TextBlock Grid.Row="3" Text="Nummerplaat" FontWeight="Bold" Margin="5,5,5,5"/>
+        <ListBox Grid.Row="4" x:Name="licensePlateListBox" Margin="0,0,0,50" />
+        <TextBlock Grid.Row="5" Text="Kilometerstand" FontWeight="Bold" Margin="5"  />
+        <TextBox Grid.Row="6" x:Name="mileageTextBox" IsEnabled="False" />
+        <RadioButton Grid.Row="7" x:Name="defaultRadioButton" Content="50 kW" HorizontalAlignment="Left" Margin="5"  />
+        <RadioButton Grid.Row="7" x:Name="fastRadioButton" Content="200 kW" HorizontalAlignment="Center" Margin="5"  />
+        <RadioButton Grid.Row="7" x:Name="superRadioButton" Content="400 kW" HorizontalAlignment="Right" Margin="5"  />
+        <Button Grid.Row="8" x:Name="startButton" Content="Start" Width="80" Margin="100,5,5,5" HorizontalAlignment="Left" />
+        <Button Grid.Row="8" x:Name="endButton" Content="Stop" Width="80" Margin="5,5,100,5" HorizontalAlignment="Right" />
+        <Image Grid.Row="9" x:Name="chargingImage" Source="/Images/charging.png" Height="100" HorizontalAlignment="Center" Visibility="Hidden" Margin="5"/>
+        <TextBlock Grid.Row="10" x:Name="chargeSessionsTextBlock" Height="100" Margin="5"/>
+
+
 
     </Grid>
 </Window>
