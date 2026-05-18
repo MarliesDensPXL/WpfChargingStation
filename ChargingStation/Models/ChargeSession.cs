@@ -42,7 +42,7 @@ namespace ChargingStation.Models
 
         public override string ToString()
         {
-			return $"{TimeStamp} ~ {Consumption} kW * {Price:c} = {(Consumption * Price):c}";
+			return $"{TimeStamp} ~ {Consumption} kW * {(Price/Consumption):c} = {Price:c}";
         }
     }
 }
